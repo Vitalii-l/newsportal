@@ -4,10 +4,10 @@
     <head>
         
         <title>Newsportal</title>
-<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!--        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">-->
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 <body>
     <nav class="one">
