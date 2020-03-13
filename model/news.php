@@ -28,7 +28,10 @@ class News {
 //        echo '$query = '.$query;
         $db = new database();
         $arr = $db->getAll($query);
-        echo '$arr = '.$arr;
+        echo '<pre>';
+        print_r($arr);
+        echo '</pre>';
+        die;
         return $arr;
     }
 }
