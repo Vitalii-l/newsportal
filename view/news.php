@@ -1,5 +1,4 @@
 <?php
-
 class ViewNews {
     public static function NewsByCategory($arr) {
         foreach ($arr as $value){
@@ -9,7 +8,6 @@ class ViewNews {
         }
     }
     
-    
     public static function AllNews($arr) {
         foreach ($arr as $value) {
             echo "<li>".$value['title'];
@@ -17,11 +15,10 @@ class ViewNews {
         }
     }
     
-    
     public static function ReadNews($n) {
-        echo "<h2>".$n['title']."</h2>";
-        echo '<br><img src="data:image/jpeg;base64,'.base64_encode($n['picture']).'" width=150 /><br>';
-        echo "<p>".$n['text']."</p>";
+        echo "<h2>".$n[0]['title']."</h2>";
+        echo '<br><img src="data:image/jpeg;base64,'.base64_encode($n[0]['picture']).'" width=150 /><br>';
+        echo "<p>".$n[0]['text']."</p>";
     }
     
 // Добавить методы для других видов представлений новостей
