@@ -22,10 +22,6 @@ class ViewComments {
     }
     
     public static function CommentsCount($value) {
-        echo '<pre>';
-        print_r($value);
-        echo '</pre>';
-        
         if ($value['count']>0){
             echo '<b><font color="red">('.$value['count'].')</font></b>';
         }

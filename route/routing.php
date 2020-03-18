@@ -5,11 +5,11 @@ $host = explode ('?', $_SERVER['REQUEST_URI'])[0];
 $num = substr_count($host, '/');
 $path = explode ('/', $host)[$num];
 
-echo '$host = '.$host.'<br>';
-echo '$path = '.$path.'<br>';
+// echo '$host = '.$host.'<br>';
+// echo '$path = '.$path.'<br>';
 
 if ($path == '' OR $path == 'index' OR $path == 'index.php'){
-    echo '$path = "",  index, index.php';
+    // echo '$path = "",  index, index.php';
     $response = Controller::StartSite();
 }
 elseif ($path == 'all'){
@@ -19,7 +19,7 @@ elseif ($path == 'category' and isset($_GET['id'])) {
      $response = Controller::NewsByCatID($_GET['id']);
 }
 elseif ($path == 'news' and isset($_GET['id'])) {
-    echo 'id = '.$_GET['id'];
+    // echo 'id = '.$_GET['id'];
      $response = Controller::NewsByID($_GET['id']);
 }
 elseif ($path == 'insertcomment' and isset($_GET['comment'],$_GET['id'])){

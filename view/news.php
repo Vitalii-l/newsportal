@@ -19,7 +19,7 @@ class ViewNews {
     
     public static function ReadNews($n) {
         echo "<h2>".$n[0]['title']."</h2>";
-        Controller::CommentsCountWithAncor($n['id']);
+        Controller::CommentsCountWithAncor($n[0]['id']);
         echo '<br><img src="data:image/jpeg;base64,'.base64_encode($n[0]['picture']).'" width=150 /><br>';
         echo "<p>".$n[0]['text']."</p>";
     }
