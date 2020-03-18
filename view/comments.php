@@ -6,7 +6,7 @@ class ViewComments {
     }
     
     public static function CommentsByNews($arr) {
-        if($arr=null){
+        if($arr!=null){
             echo '<table id="ctable"><th>Kommentar</th><th>Kuupäev</th>';
             foreach ($arr as $value) {
                 echo '<tr><td>'.$value['text'].'</td><td>'.$value['date'].'</td></tr>';
@@ -23,7 +23,7 @@ class ViewComments {
     
     public static function CommentsCount($value) {
         if ($value['count']>0){
-            echo '<b><font color="red">('.$value['count'].')</font></b>';
+            echo '<b><font color="red"> ('.$value['count'].')</font></b>';
         }
     }
 }
