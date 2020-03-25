@@ -183,3 +183,7 @@ h1{
 th{
     text-align: center;
 }
+
+#content {
+	padding-top: 20px;
+}
