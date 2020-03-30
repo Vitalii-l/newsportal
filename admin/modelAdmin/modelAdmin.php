@@ -11,15 +11,18 @@ class modelAdmin {
                 if(isset($_POST['email']) && isset($_POST['password']) && $_POST['email']!="" && $_POST['password']!=""){
                     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
                     $password = filter_input(INPUT_POST, 'password');
+                    $sql = 'SELECT * FROM `users` WHERE `email`="'.$email.'"';
                     $db = new database();
                     $item = $db->getOne($sql);
+                    
                     if ($item!=null){
                         $loginEmail = strtolower($_POST['email']);
                         $password = $_POST['password'];
-                        if ($loginEmail == $item['email'] && password_verify($password, $item['password'])){
+                        if ($loginEmail == $item['email'] && password_verify($password, $item['parol'])){
+                            echo 'Login success!!!';
                             $_SESSION['sessionId'] = session_id();
                             $_SESSION['userId'] = $item['id'];
-                            $_SESSION['name'] = $item['username'];
+                            $_SESSION['name'] = $item['login'];
                             $_SESSION['status'] = $item['status'];
                             $logIn = true;
                         }
@@ -40,3 +43,4 @@ class modelAdmin {
         return;
     }
 }
+?>

@@ -8,6 +8,5 @@
     </div>
 </article>
 
-<?php $content = ob_get_clean();
-include 'viewAdmin/templates/layout.php';
-?>
+<?php $content = ob_get_clean();?>
+<?php include "viewAdmin/templates/layout.php";

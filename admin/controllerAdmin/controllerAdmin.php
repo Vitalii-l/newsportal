@@ -5,9 +5,9 @@ class controllerAdmin {
     }
     
     // Admin authentification form
-    public function loginAction() {
-        $logIn=modelAdmin::userAuthentication();
-        if(isset($logIn) and $logIn==ture){
+    public static function loginAction() {
+        $logIn= modelAdmin::userAuthentication();
+        if(isset($logIn) and $logIn == ture){
             include_once('viewAdmin/startAdmin.php');
         }
         else {
@@ -16,7 +16,7 @@ class controllerAdmin {
        }
     }
     
-    // Admin dashboard logout
+    // Admin panel logout
     public static function logoutAction() {
         modelAdmin::userLogout();
         include_once ('viewAdmin/formLogin.php');
