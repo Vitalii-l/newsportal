@@ -19,7 +19,7 @@ class modelAdmin {
                         $loginEmail = strtolower($_POST['email']);
                         $password = $_POST['password'];
                         if ($loginEmail == $item['email'] && password_verify($password, $item['parol'])){
-                            echo 'Login success!!!';
+//                            echo 'Login success!!!';
                             $_SESSION['sessionId'] = session_id();
                             $_SESSION['userId'] = $item['id'];
                             $_SESSION['name'] = $item['login'];

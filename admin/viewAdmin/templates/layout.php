@@ -23,7 +23,7 @@
                         <?php
                         echo '<ul class="nav nav-pills pull-right">'
                         . '<li role="button">'.$_SESSION["name"].
-                        '<a href="logout" style="display:inline;">Выйти '
+                        '<a href="logout" style="display:inline;"> Выйти'
                         .'<i class="fa fa-sign-out"></i></a></li></ul>';
                         
                         if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin"){

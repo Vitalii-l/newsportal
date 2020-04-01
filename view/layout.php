@@ -22,6 +22,7 @@
                 </ul>
             </li>
             <li><a href="testError">Info</a></li>
+            <li><a href="admin">Login</a></li>
             
         </ul>
     </nav>
