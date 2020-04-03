@@ -54,5 +54,15 @@ class Controller {
         $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::CommentsCountWithAncor($arr);
     }
-}
+    
+    // ------------- Registration ---------------
+    public function registerForm() {
+        include_once ('view/formRegister.php');
+    }
+    public function registerUser() {
+        include_once ('view/answerRegister.php');
+    }
+    
+    
+} // end class
 ?>
