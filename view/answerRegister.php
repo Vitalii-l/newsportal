@@ -15,7 +15,9 @@ if(isset($result)){
         ?>
         <div class="container">
             <div class="alert alert-info">
-                <strong>Error!</strong><?php echo $result[1];?><a href="registerForm">Registration From</a>
+                <strong>Error! </strong><br>
+                <?php echo $result[1];?><br>
+                <a href="registerForm">Registration From</a>
             </div>
         </div>
         <?php

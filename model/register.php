@@ -20,7 +20,9 @@ class Register {
             if (mb_strlen($errorString) == 0){
                 $passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $date = Date("Y-m-d");
-                $sql = "INSERT INTO `users` (`id`, `username`, `email`, `password`, `status`, `registration_date`, `pass`) VALUES (NULL, '$name', '$email', '$passwordHash', 'user', '$date', '$password')";
+         $sql = "INSERT INTO `users` (`id`, `login`, `email`, `parol`, `password`,`status`, `registration_date`)"
+                           . "VALUES (NULL, '$name', '$email', '$passwordHash', '$password', 'user', '$date')";
+                echo $sql;
                 $db = new database();
                 $item = $db->executeRun($sql);
                 if ($item)
@@ -34,7 +36,7 @@ class Register {
         }
         return $controll;
     }
-}
+} // class Register end
 
 ?>
    
