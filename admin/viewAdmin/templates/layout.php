@@ -5,10 +5,13 @@
         <meta charset="utf-8">
         <link href="./css/mystyle.css" rel="stylesheet" type="text/css" />
         <link href="./css/login.css" rel="stylesheet" type="text/css" />
-        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!--        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
-        <script src="./js/bootstrap.min.js" type="text/javascript"></script>
-<!--        <script src="js/popper.min.js"></script>-->
+        <script src="./js/bootstrap.min.js" type="text/javascript"></script>-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <div class="container">
@@ -28,8 +31,9 @@
                         
                         if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin"){
                             echo '<h4><a href="../" target=_blank>WEB SITE </a>';
-                            echo '  &#187 <a href="categoryAdmin">Categories </a>';
-                            echo '  &#187 <a href="newsAdmin">NewsList </a>';
+                            echo ' &#187 <a href="./">Start Admin </a>';
+                            echo '  &#187 <a href="categoryAdmin">News Categories</a>';
+                            echo '  &#187 <a href="newsAdmin">News List</a>';
                             echo '</h4>';
                         } else{
                             echo "<h4>Access denied. You haven't rights";

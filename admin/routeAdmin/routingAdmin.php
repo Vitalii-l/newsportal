@@ -12,9 +12,12 @@ elseif ($path == 'login'){
     // Login form
     $response = controllerAdmin::loginAction();
 }
- elseif ($path = 'logout') {
+ elseif ($path == 'logout') {
      // Logout
      $response = controllerAdmin::logoutAction();
+}
+elseif ($path == 'newsAdmin') {
+    $response = controllerAdminNews::NewsList();
 }
 else {
     // Page not found
