@@ -16,8 +16,16 @@ elseif ($path == 'login'){
      // Logout
      $response = controllerAdmin::logoutAction();
 }
+//------------- News List
 elseif ($path == 'newsAdmin') {
     $response = controllerAdminNews::NewsList();
+}
+//------------- Add News
+elseif ($path == 'newsAdd'){
+    $response = controllerAdminNews::newsAddForm();
+}
+elseif ($path = 'newsAddResult'){
+    controllerAdminNews::newsAddResult();
 }
 else {
     // Page not found
