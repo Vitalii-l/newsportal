@@ -19,10 +19,15 @@ class modelAdminNews {
                 $idCategory = $_POST['idCategory'];
                 
                 // ------- image type blob
-                $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+                if(isset($_FILES['picture'])){
+                    $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+                    $sql = "INSERT INTO `news` (`id`,`title`,`text`,`picture`,`category_id`,`user_id`) VALUES (NULL, '$title', '$text', '$image', '$idCategory', '9')";
+                }
                 // -----------------------
-                $sql = "INSERT INTO `news` (`id`,`title`,`text`,`picture`,`category_id`,`user_id`) VALUES (NULL, '$title', '$text', '$image', '$idCategory', '1')";
-                $db - new database();
+                else {$sql = "INSERT INTO `news` (`id`,`title`,`text`,`category_id`,`user_id`) VALUES (NULL, '$title', '$text', '$idCategory', '9')";
+                    
+                }
+                $db = new database();
                 $item = $db->executeRun($sql);
                 if ($item == true){$test = true;}
                 
@@ -30,4 +35,4 @@ class modelAdminNews {
         }
     return $test;
     }
-}
+} // end Class

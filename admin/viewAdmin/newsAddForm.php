@@ -8,14 +8,14 @@
             if($test == true){
         ?>
                 <div class="alert alert-info">
-                    <strong>News added.</strong><a href="newsAdmin">News List</a>
+                    <strong>News added.</strong><a href="newsAdmin"> News List</a>
                 </div>
         <?php
             }
         else if ($test == false) {
             ?>
             <div class="alert alert-warning">
-                <strong>An error occurred while trying to add news</strong><a href="newsAdmin">News List</a>
+                <strong>An error occurred while trying to add news</strong><a href="newsAdmin"> News List</a>
             </div>
         <?php
         }
@@ -38,7 +38,7 @@
                     <td>
                         <select name="idCategory" class="form-control">
                             <?php
-                                    foreach ($arr as $$row) {
+                                    foreach ($arr as $row) {
                                         echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';
                                     }
                             ?>            

@@ -24,8 +24,8 @@ elseif ($path == 'newsAdmin') {
 elseif ($path == 'newsAdd'){
     $response = controllerAdminNews::newsAddForm();
 }
-elseif ($path = 'newsAddResult'){
-    controllerAdminNews::newsAddResult();
+elseif ($path == 'newsAddResult'){
+    $response = controllerAdminNews::newsAddResult();
 }
 else {
     // Page not found
