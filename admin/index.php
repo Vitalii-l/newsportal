@@ -7,6 +7,7 @@ include_once 'modelAdmin/modelAdminCategory.php';
 
 include_once ('controllerAdmin/controllerAdmin.php');
 include_once 'controllerAdmin/controllerAdminNews.php';
+include_once 'controllerAdmin/controllerAdminCategory.php';
 
 include ('routeAdmin/routingAdmin.php');
 

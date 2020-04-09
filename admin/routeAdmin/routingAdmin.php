@@ -16,6 +16,10 @@ elseif ($path == 'login'){
      // Logout
      $response = controllerAdmin::logoutAction();
 }
+//------------- Category List
+elseif ($path == 'categoryAdmin') {
+    $response = controllerAdminCategory::categoryList();
+}
 //------------- News List
 elseif ($path == 'newsAdmin') {
     $response = controllerAdminNews::NewsList();
