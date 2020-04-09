@@ -36,6 +36,14 @@ elseif ($path == 'newsEdit' && isset($_GET['id'])){
     $response = controllerAdminNews::newsEditResult($_GET['id']);
 }
 
+//------------- Delete News
+elseif ($path == 'newsDel' && isset($_GET['id'])){
+    $response = controllerAdminNews::newsDeleteForm($_GET['id']);
+}
+ elseif ($path == 'newsDelResult' && isset($_GET['id'])) {
+    $response = controllerAdminNews::newsDeleteResult($_GET['id']);
+}
+
 else {
     // Page not found
     $response = controllerAdmin::error404();
