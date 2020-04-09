@@ -27,6 +27,15 @@ elseif ($path == 'newsAdd'){
 elseif ($path == 'newsAddResult'){
     $response = controllerAdminNews::newsAddResult();
 }
+
+//------------- Edit News
+elseif ($path == 'newsEdit' && isset($_GET['id'])){
+    $response = controllerAdminNews::newsEditForm($_GET['id']);
+}
+ elseif ($path == 'newsEditResult' && isset($_GET['id'])) {
+    $response = controllerAdminNews::newsEditResult($_GET['id']);
+}
+
 else {
     // Page not found
     $response = controllerAdmin::error404();
