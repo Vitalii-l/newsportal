@@ -28,6 +28,14 @@ elseif ($path == 'categoryAddResult'){
     $response = controllerAdminCategory::categoryAddResult();
 }
 
+//------------- Edit Category
+elseif ($path == 'categoryEdit' && isset($_GET['id'])){
+    $response = controllerAdminCategory::categoryEditForm($_GET['id']);
+}
+elseif ($path == 'categoryEditResult' && isset($_GET['id'])) {
+    $response = controllerAdminCategory::categoryEditResult($_GET['id']);
+}
+
 //------------- News List
 elseif ($path == 'newsAdmin') {
     $response = controllerAdminNews::NewsList();
@@ -44,7 +52,7 @@ elseif ($path == 'newsAddResult'){
 elseif ($path == 'newsEdit' && isset($_GET['id'])){
     $response = controllerAdminNews::newsEditForm($_GET['id']);
 }
- elseif ($path == 'newsEditResult' && isset($_GET['id'])) {
+elseif ($path == 'newsEditResult' && isset($_GET['id'])) {
     $response = controllerAdminNews::newsEditResult($_GET['id']);
 }
 

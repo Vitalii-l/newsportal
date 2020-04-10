@@ -28,5 +28,27 @@ class modelAdminCategory {
         return $test;
     }
     
+    // -------- Edit Category
+    public static function getCategoryDetail($id) {
+        $query = "SELECT * FROM category WHERE category.id =".$id." ORDER BY category.name";
+        $db = new database();
+        $arr = $db->getOne($query);
+        return $arr;
+    }
+    
+    public static function getCategoryEdit($id) {
+        $test = false;
+        if(isset($_POST['save'])){
+            if(isset($_POST['name'])){
+                $name = $_POST['name'];
+                $sql = "UPDATE `category` SET `name` = '$name' WHERE `category`.`id` = ".$id;
+                $db = new database();
+                $item = $db->executeRun($sql);
+                if ($item == true){$test = true;}
+            }
+        }
+        return $test;
+    }
+    
 } // Class end
 ?>
