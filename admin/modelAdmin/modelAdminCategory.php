@@ -28,7 +28,7 @@ class modelAdminCategory {
         return $test;
     }
     
-    // -------- Edit Category
+    // -------- Return one Category to edit/delete
     public static function getCategoryDetail($id) {
         $query = "SELECT * FROM category WHERE category.id =".$id." ORDER BY category.name";
         $db = new database();
@@ -36,6 +36,7 @@ class modelAdminCategory {
         return $arr;
     }
     
+    // -------- Edit Category
     public static function getCategoryEdit($id) {
         $test = false;
         if(isset($_POST['save'])){
@@ -46,6 +47,18 @@ class modelAdminCategory {
                 $item = $db->executeRun($sql);
                 if ($item == true){$test = true;}
             }
+        }
+        return $test;
+    }
+    
+    // -------- Delete Category
+    public static function getCategoryDelete($id) {
+        $test = false;
+        if(isset($_POST['save'])){
+            $sql = "DELETE FROM `category` WHERE `category`.`id` = ".$id;
+            $db = new database();
+            $item = $db->executeRun($sql);
+            if($item == true){$test = true;}
         }
         return $test;
     }

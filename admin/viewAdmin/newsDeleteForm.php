@@ -7,11 +7,11 @@
         if(isset($test)){
             if($test == true){?>
             <div class="alert alert-info">
-                <strong>News deleted </strong><a href="newsAdmin"> News List</a>
+                <strong>News deleted </strong><a href="newsAdmin">News List</a>
             </div>
             <?php
             }
-            else if($test == flse){
+            else if($test == false){
                 ?>
                     <div class="alert alert-warning">
                         <strong>Error occured while news deleting! </strong><a href="newsAdmin"> News List</a>

@@ -27,4 +27,14 @@ class controllerAdminCategory {
         include_once 'viewAdmin/categoryEditForm.php';
     }
     
+    //------- Delete Category
+    public static function categoryDeleteForm($id) {
+        $detail = modelAdminCategory::getCategoryDetail($id);
+        include_once 'viewAdmin/categoryDeleteForm.php';
+    }
+    public static function categoryDeleteResult($id) {
+        $test = modelAdminCategory::getCategoryDelete($id);
+        include_once 'viewAdmin/categoryDeleteForm.php';
+    }
+    
 } // end Class
