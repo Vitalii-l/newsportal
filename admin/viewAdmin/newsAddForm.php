@@ -10,15 +10,13 @@
                 <div class="alert alert-info">
                     <strong>News added.</strong><a href="newsAdmin"> News List</a>
                 </div>
-        <?php
-            }
-        else if ($test == false) {
-            ?>
-            <div class="alert alert-warning">
-                <strong>An error occurred while trying to add news</strong><a href="newsAdmin"> News List</a>
-            </div>
-        <?php
-        }
+        <?php }
+            else if ($test == false) {
+                ?>
+                <div class="alert alert-warning">
+                    <strong>An error occurred while trying to add news</strong><a href="newsAdmin"> News List</a>
+                </div>
+            <?php }
         }
         else {            
         ?>

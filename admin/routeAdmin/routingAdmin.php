@@ -20,6 +20,14 @@ elseif ($path == 'login'){
 elseif ($path == 'categoryAdmin') {
     $response = controllerAdminCategory::categoryList();
 }
+//------------- Category Add
+elseif ($path == 'categoryAdd'){
+    $response = controllerAdminCategory::categoryAddForm();
+}
+elseif ($path == 'categoryAddResult'){
+    $response = controllerAdminCategory::categoryAddResult();
+}
+
 //------------- News List
 elseif ($path == 'newsAdmin') {
     $response = controllerAdminNews::NewsList();

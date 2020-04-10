@@ -9,5 +9,24 @@ class modelAdminCategory {
         $rows = $db->getAll($sql);
         return $rows;
     }
+    
+    // -------- Add Category
+    public static function getCategoryAdd() {
+        $test = false;
+        if (isset($_POST['save'])){
+            if(isset($_POST['name'])) {
+                $name = $_POST['name'];
+                $sql = "INSERT INTO `category` (`name`) VALUES ('$name')";
+                $db = new database();
+                $item = $db->executeRun($sql);
+                if ($item == true){$test = true;}
+            }
+            else {
+                echo "Error. Category name doesn't defined";
+            }     
+        }
+        return $test;
+    }
+    
 } // Class end
 ?>
