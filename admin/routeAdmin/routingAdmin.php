@@ -7,7 +7,7 @@ if ($path == '' OR $path == 'index.php'){
     // Main page
     $response = controllerAdmin::formLoginSite();
 }
-// ---- Logging in ----
+// ---- Login, Logout ----
 elseif ($path == 'login'){
     // Login form
     $response = controllerAdmin::loginAction();
@@ -16,6 +16,21 @@ elseif ($path == 'login'){
      // Logout
      $response = controllerAdmin::logoutAction();
 }
+// ---- User profile -------
+elseif ($path == 'userProfile'){
+    $response = controllerAdmin::userProfile();
+}
+
+// ---- Password change ----
+elseif ($path == 'passwordChange'){
+    // Password change form
+    $response = controllerAdmin::formPasswordChange();
+}
+elseif ($path == 'passwordChangeAnswer'){
+    // Password change answer
+    $response = controllerAdmin::userPasswordChange();
+}
+
 //------------- Category List
 elseif ($path == 'categoryAdmin') {
     $response = controllerAdminCategory::categoryList();

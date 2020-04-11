@@ -24,10 +24,15 @@
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <?php
-                        echo '<ul class="nav nav-pills pull-right">'
-                        . '<li role="button">'.$_SESSION["name"].
-                        '<a href="logout" style="display:inline;"> Logout'
-                        .'<i class="fa fa-sign-out"></i></a></li></ul>';
+//                        echo '<ul class="nav nav-pills pull-right">'
+//                        . '<li role="button">'.$_SESSION["name"].
+//                        '<a href="logout" style="display:inline;"> Logout'
+//                        .'<i class="fa fa-sign-out"></i></a></li></ul>';
+                        echo '<ul class="nav nav-pills pull-right btn-group" role="group">'
+                        .'<li>'
+                        .'<a href="userProfile" style="display:inline;"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> '.$_SESSION['name'].'</button></a>'
+                        .'<a href="logout" style="display:inline;"><button type="button" class="btn btn-default">Logout <span class="glyphicon glyphicon-log-out"></span>'
+                        .'</button></a></li></ul>';
                         
                         if (isset($_SESSION["status"]) && $_SESSION["status"] == "admin"){
                             echo '<h4><a href="../" target=_blank>WEB SITE </a>';
