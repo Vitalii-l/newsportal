@@ -27,6 +27,16 @@ class controllerAdmin {
         $user = modelAdmin::getUserData();
         include_once 'viewAdmin/userProfile.php';
     }
+    
+    // Profile Change
+    public static function formProfileEdit() {
+        $userdata = modelAdmin::getUserData();
+        include_once 'viewAdmin/formProfileEdit.php';
+    }
+    public static function profileChange() {
+        $test = modelAdmin::profileChange();
+        include_once 'viewAdmin/formProfileEdit.php';
+    }
 
     // Password change
     public static function formPasswordChange() {

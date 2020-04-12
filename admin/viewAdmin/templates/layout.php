@@ -41,6 +41,7 @@
                             echo '  &#187 <a href="newsAdmin">News List</a>';
                             echo '</h4>';
                         } else{
+                            echo '<h4><a href="../" target=_blank>WEB SITE </a>';
                             echo "<h4>Access denied. You haven't rights";
                         }
                         ?>

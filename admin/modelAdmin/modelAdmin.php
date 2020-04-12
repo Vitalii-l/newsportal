@@ -100,5 +100,38 @@ class modelAdmin {
         }
         return $controll;
     }
+    
+    // Profile change
+    public static function profileChange() {
+        $test = false;
+        if(isset($_POST['save'])){
+            if(isset($_POST['username']) && isset($_POST['userlogin']) && isset($_POST['useremail'])){
+                $name = $_POST['username'];
+                $login = $_POST['userlogin'];
+                $email = $_POST['useremail'];
+                $job = $_POST['userjob'];
+                
+                // ------- image type blob
+                $image = $_FILES['picture']['name'];
+                if($image != ""){
+                    $image = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+                }
+                // --- In case of a picture isn't chosen 
+                if ($image == ""){
+                    $sql = "UPDATE `users` SET `name` = '$name', `login` = '$login', `email` = '$email' WHERE `users`.`email`='".$_SESSION['email']."'";
+                }
+                // --- Picture chosen
+                else {
+                    $sql = "UPDATE `users` SET `name` = '$name', `login` = '$login', `email` = '$email', `picture` = '$image' WHERE `users`.`email` ='".$_SESSION['email']."'";
+                }
+                
+                $db = new database();
+                $item = $db->executeRun($sql);
+                
+                if ($item == true){$test = true;$_SESSION['email'] = $email;}
+            }
+        }
+        return $test;
+    }
 }
 ?>

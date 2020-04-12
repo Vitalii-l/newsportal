@@ -12,7 +12,7 @@
             </div>
             <?php
             }
-            else if($test == flse){
+            else if($test == false){
                 ?>
                     <div class="alert alert-warning">
                         <strong>Error occured while news changing! </strong><a href="newsAdmin"> News List</a>

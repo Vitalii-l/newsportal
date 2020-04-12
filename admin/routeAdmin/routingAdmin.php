@@ -16,7 +16,7 @@ elseif ($path == 'login'){
      // Logout
      $response = controllerAdmin::logoutAction();
 }
-// ---- User profile -------
+// ---- User profile ----
 elseif ($path == 'userProfile'){
     $response = controllerAdmin::userProfile();
 }
@@ -29,6 +29,16 @@ elseif ($path == 'passwordChange'){
 elseif ($path == 'passwordChangeAnswer'){
     // Password change answer
     $response = controllerAdmin::userPasswordChange();
+}
+
+// ---- User Profile Edit ----
+elseif ($path == 'profileChange'){
+    // Profile change form
+    $response = controllerAdmin::formProfileEdit();
+}
+elseif ($path == 'profileChangeAnswer'){
+    // Profile change answer
+    $response = controllerAdmin::profileChange();
 }
 
 //------------- Category List
